@@ -1,112 +1,137 @@
-const estudiantes = {
-    "31985267": "EXIME",
-    "33371704": "EXIME",
-    "30947524": "EXIME",
-    "31385531": "EXIME",
-    "32710984": "EXIME",
-    "31873937": "EXIME",
-    "31661914": "EXIME",
-    "32100864": "EXIME",
-    "32756210": "EXIME",
-    "32352704": "EXIME",
-    "32236082": "EXIME",
-    "32534997": "Inglés V",
-    "32724647": "Inglés V",
-    "32242382": "Inglés IV y V",
-    "34123740": "Inglés IV y V",
-    "29965143": "Eximido",
-    "30751422": "Eximido",
-    "29625804": "Eximido",
-    "32534733": "Eximido",
-    "29625499": "Eximido",
-    "28180335": "Eximido",
-    "32122020": "Eximido",
-    "29662157": "Eximido",
-    "26443006": "Eximido",
-    "21014584": "Eximido",
-    "25327026": "Eximido",
-    "32688188": "Eximido",
-    "30719520": "Eximido",
-    "31307621": "Eximido",
-    "30052794": "Eximido",
-    "28472841": "Eximido",
-    "28301202": "Eximido",
-    "32348138": "Eximido",
-    "32348152": "Eximido",
-    "28588624": "Eximido",
-    "30496325": "Eximido",
-    "31307622": "Eximido",
-    "29756092": "Eximido",
-    "32595407": "Eximido",
-    "32534732": "Eximido",
-    "31361965": "Eximido",
-    "30720147": "Eximido",
-    "26973928": "Eximido",
-    "29864639": "Eximido",
-    "32348579": "Eximido",
-    "29577069": "Eximido",
-    "30124714": "Eximido",
-    "32560503": "Eximido",
-    "31852426": "Eximido",
-    "31423025": "Inglés V",
-    "30722308": "Inglés V",
-    "31065864": "Inglés V",
-    "31307087": "Inglés V",
-    "31065183": "Inglés V",
-    "28481417": "Inglés V",
-    "29983279": "Inglés V",
-    "30715329": "Inglés V",
-    "30750812": "Inglés V",
-    "27714146": "Inglés V",
-    "29666935": "Inglés V",
-    "32422960": "Inglés V",
-    "32133482": "Inglés V",
-    "27894701": "Inglés V",
-    "28220820": "Inglés V",
-    "24898202": "Inglés IV",
-    "32011572": "Inglés IV",
-    "27703524": "Inglés IV",
-    "32438373": "Inglés IV",
-    "32161771": "Inglés IV",
-    "32852503": "Inglés IV",
-    "32122059": "Inglés IV",
-    "31895174": "Inglés IV",
-    "31909238": "Inglés IV",
-    "32624143": "Inglés IV",
-    "30907079": "Inglés IV",
-    "30245995": "Inglés IV",
-    "32697631": "Inglés III",
-    "30497533": "Inglés III",
-    "31556891": "Inglés III",
-    "31230096": "Inglés III",
-    "30413228": "Inglés III",
-    "19292583": "Inglés III",
-    "30424749": "Inglés III",
-    "30849627": "Inglés III",
-    "30634649": "Inglés III",
-    "32051694": "Inglés III",
-    "30496885": "Inglés III",
-    "31649258": "Inglés III",
-    "32397791": "Inglés III",
-    "31317137": "Inglés III",
-    "27714291": "Inglés III",
-    "30096674": "Inglés III",
-    "28312757": "Inglés II",
-    "32695631": "Inglés II",
-    "29508533": "Inglés II",
-    "27805931": "Inglés II",
-    "32432608": "Inglés II",
-    "25329238": "Inglés II",
-    "30408011": "Inglés I",
-    "30134097": "Inglés I",
-    "30751737": "Inglés I",
-    "32520003": "Inglés I",
-    "28424728": "Inglés I",
-    "32700505": "Inglés I",
-    "27714415": "Inglés I",
-    "29502028": "Inglés I",
-    "32423442": "Inglés I",
-    "30330377": "Inglés I",
-    "27647882": "Inglés I",
-    "13444751": "Inglés I"
-};
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Resultados PUI - UNIMET</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border-top: 8px solid #f37021;
+        }
+        .logo-unimet {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #1e3a8a;
+            margin: 5px 0;
+            font-size: 24px;
+        }
+        p.subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        input[type="text"] {
+            width: 85%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            outline: none;
+            text-align: center;
+        }
+        input[type="text"]:focus {
+            border-color: #f37021;
+        }
+        button {
+            background-color: #f37021;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 92%;
+        }
+        button:hover {
+            background-color: #d65a12;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #e6f4ea;
+            color: #137333;
+            border: 1px solid #c2e7cb;
+        }
+        .error {
+            background-color: #fce8e6;
+            color: #c5221f;
+            border: 1px solid #fad2cf;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Logo oficial directo de internet para que no falle -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Logo_Unimet.png" alt="Logo UNIMET" class="logo-unimet">
+    
+    <h2>Resultados PUI</h2>
+    <p class="subtitle">Por favor, ingrese su Cédula de Identidad</p>
+    
+    <input type="text" id="cedulaInput" placeholder="Ej: 31985267" onkeypress="checkEnter(event)">
+    <button onclick="buscarResultado()">Consultar</button>
+
+    <div id="resultado" class="result-box"></div>
+</div>
+
+<!-- Aquí se conecta con el archivo de datos que acabamos de crear -->
+<script src="datos.js"></script>
+<script>
+    function buscarResultado() {
+        const input = document.getElementById('cedulaInput').value.trim();
+        const divResultado = document.getElementById('resultado');
+
+        if (input === "") {
+            divResultado.className = "result-box error";
+            divResultado.innerHTML = "Por favor, introduce un número de cédula.";
+            divResultado.style.display = "block";
+            return;
+        }
+
+        if (window.estudiantes && estudiantes[input]) {
+            divResultado.className = "result-box success";
+            divResultado.innerHTML = `Información Encontrada:<br><span style="font-size: 22px; display:block; margin-top:5px;">${estudiantes[input]}</span>`;
+        } else {
+            divResultado.className = "result-box error";
+            divResultado.innerHTML = "Cédula no encontrada. Verifique los datos o contacte al departamento.";
+        }
+        
+        divResultado.style.display = "block";
+    }
+
+    function checkEnter(event) {
+        if (event.key === "Enter") {
+            buscarResultado();
+        }
+    }
+</script>
+
+</body>
+</html>
